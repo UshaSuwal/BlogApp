@@ -20,22 +20,33 @@ export function Post() {
       readtime: "4 min read",
     },
   ];
+
+  const count = posts.length;
+
   return (
-    <div class="container mx-auto">
-      <div class="py-16 lg:py-20">
-        <div class="flex items-center pb-6">
+    <div className="container mx-auto">
+      <div className="py-16 lg:py-20">
+        <div className="flex items-center pb-6">
           <MyStoryTitle />
-          <a
-            href="/blog"
-            class="flex items-center pl-10 font-body italic text-green transition-colors hover:text-secondary dark:text-green-light dark:hover:text-secondary"
-          >
-            All posts
-            <img
-              src="./assets/img/long-arrow-right.png"
-              class="ml-3"
-              alt="arrow right"
-            />
-          </a>
+          {count < 3 ? (
+            <a href="/blog" className="flex items-center pl-10 font-body italic text-green transition-colors hover:text-secondary dark:text-green-light dark:hover:text-secondary">
+              All posts
+              <img
+                src="./assets/img/long-arrow-right.png"
+                className="ml-3"
+                alt="arrow right"
+              />
+            </a>
+          ) : (
+            <a href="/blog" className="flex items-center pl-10 hidden font-body italic text-green transition-colors hover:text-secondary dark:text-green-light dark:hover:text-secondary">
+              All posts
+              <img
+                src="./assets/img/long-arrow-right.png"
+                className="ml-3 hidden"
+                alt="arrow right"
+              />
+            </a>
+          )}
         </div>
         <Category posts={posts} />
       </div>
