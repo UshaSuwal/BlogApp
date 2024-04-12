@@ -1,5 +1,6 @@
+import { AllPost } from "./AllPost";
 import { Category } from "./Category";
-import { MyStoryTitle } from "./MyStoryTitle";
+import { MyTitle } from "./MyTitle";
 
 export function Post() {
   const posts = [
@@ -27,26 +28,8 @@ export function Post() {
     <div className="container mx-auto">
       <div className="py-16 lg:py-20">
         <div className="flex items-center pb-6">
-          <MyStoryTitle />
-          {count < 3 ? (
-            <a href="/blog" className="flex items-center pl-10 font-body italic text-green transition-colors hover:text-secondary dark:text-green-light dark:hover:text-secondary">
-              All posts
-              <img
-                src="./assets/img/long-arrow-right.png"
-                className="ml-3"
-                alt="arrow right"
-              />
-            </a>
-          ) : (
-            <a href="/blog" className="flex items-center pl-10 hidden font-body italic text-green transition-colors hover:text-secondary dark:text-green-light dark:hover:text-secondary">
-              All posts
-              <img
-                src="./assets/img/long-arrow-right.png"
-                className="ml-3 hidden"
-                alt="arrow right"
-              />
-            </a>
-          )}
+          <MyTitle imagepath='/assets/img/icon-story.png' title='My Story' />
+          {count > 2 && (<AllPost />)}
         </div>
         <Category posts={posts} />
       </div>

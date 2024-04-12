@@ -1,10 +1,12 @@
 import { ProjectDetail } from "./ProjectDetail";
 
 export function ProjectCategory({projects}){
+  const limitedProjects = projects.slice(0, 2);
     return(
         <>
-        {projects.map((project) => (
+        {limitedProjects.map((project) => (
             <ProjectDetail
+              key={project.title + project.description}
               title={project.title}
               description={project.description}
             />
@@ -12,3 +14,6 @@ export function ProjectCategory({projects}){
         </>
     )
 }
+
+
+

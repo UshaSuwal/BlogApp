@@ -1,3 +1,5 @@
+import { AllPost } from "./AllPost";
+import { MyTitle } from "./MyTitle";
 import { ProjectCategory } from "./ProjectCategory";
 
 export function Project() {
@@ -21,18 +23,16 @@ export function Project() {
     },
   ];
 
+  let count=projects.length
   
   return (
     <>
-      <div class="container mx-auto">
-        <div class="flex items-center pb-6">
-          <img src="/assets/img/icon-project.png" alt="icon story" />
-          <h3 class="ml-3 font-body text-2xl font-semibold text-primary dark:text-white">
-            My Projects
-          </h3>
+      <div className="container mx-auto">
+        <div className="flex items-center pb-6">
+          <MyTitle imagepath='/assets/img/icon-project.png' title='My Projects' />
+          {count >2 && <AllPost />}
         </div>
       </div>
-
       <ProjectCategory projects={projects} />
     </>
   );

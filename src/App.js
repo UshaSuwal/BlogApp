@@ -14,8 +14,6 @@ function App() {
       <Story />
       <Post/>
       <Project />
-
-      
     </div>
   );
 }
