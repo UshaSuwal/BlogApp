@@ -1,7 +1,7 @@
 import { ProjectDetail } from "./ProjectDetail";
 
 export function ProjectCategory({projects}){
-  const limitedProjects = projects.slice(0, 2);
+  const limitedProjects = projects.slice(0, 4);
     return(
         <>
         {limitedProjects.map((project) => (
