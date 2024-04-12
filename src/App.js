@@ -1,4 +1,5 @@
 import "./App.css";
+import { Footer } from "./components/Footer";
 import { Intro } from "./components/Intro";
 import Navbar from "./components/Navbar";
 import { Post } from "./components/Post";
@@ -14,6 +15,7 @@ function App() {
       <Story />
       <Post/>
       <Project />
+      <Footer />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { AllPost } from "./AllPost";
+import { All } from "./All";
 import { Category } from "./Category";
 import { MyTitle } from "./MyTitle";
 
@@ -29,7 +29,7 @@ export function Post() {
       <div className="py-16 lg:py-20">
         <div className="flex items-center pb-6">
           <MyTitle imagepath='/assets/img/icon-story.png' title='My Story' />
-          {count > 2 && (<AllPost />)}
+          {count > 2 && (<All title='All Post' />)}
         </div>
         <Category posts={posts} />
       </div>

@@ -1,4 +1,4 @@
-import { AllPost } from "./AllPost";
+import { All } from "./All";
 import { MyTitle } from "./MyTitle";
 import { ProjectCategory } from "./ProjectCategory";
 
@@ -30,7 +30,7 @@ export function Project() {
       <div className="container mx-auto">
         <div className="flex items-center pb-6">
           <MyTitle imagepath='/assets/img/icon-project.png' title='My Projects' />
-          {count >2 && <AllPost />}
+          {count >2 && <All title='All Project' />}
         </div>
       </div>
       <ProjectCategory projects={projects} />
